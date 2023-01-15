@@ -1,0 +1,19 @@
+yum install java-1.8.0 java-1.8.0-openjdk-devel -y
+
+Downloading Jenkins repo:
+---------------------------
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+amazon-linux-extras install epel -y
+
+yum update -y
+
+Installing Jenkins:
+-------------------
+yum install jenkins -y
+systemctl enable jenkins
+systemctl status jenkins
+systemctl start jenkins
+
+Post Installation, adding java home path:
+
